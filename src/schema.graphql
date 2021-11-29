@@ -1,0 +1,33 @@
+type Query {
+    getAllCoffees: [Coffee]
+    getAllRoasters: [Roaster]
+}
+
+input CreateRoasterInput {
+    name: String!
+    location: String!
+}
+
+input CreateCoffeeInput {
+    name: String!
+    description: String
+    roasterId: Int!
+}
+
+type Mutation {
+    createRoaster(createRoasterInput: CreateRoasterInput): Roaster
+    createCoffee(createCoffeeInput: CreateCoffeeInput): Coffee
+}
+
+type Roaster {
+    id: ID!
+    name: String!
+    location: String!
+}
+
+type Coffee {
+    id: ID!
+    name: String!
+    description: String
+    roaster: Roaster!
+}

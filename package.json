@@ -1,0 +1,20 @@
+{
+  "name": "node-apollo-api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "rundb": "docker-compose up db"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.5.0",
+    "apollo-server": "^3.5.0",
+    "graphql": "^16.0.1",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "prisma": "^3.5.0"
+  }
+}
